@@ -1,12 +1,15 @@
 ---
 layout: home
-title: Welcome
+title: Hi, I'm Nina.
 permalink: /
 section: home
-intro_paragraph: >
-  [Jekyll Netlify Boilerplate](https://github.com/danurbanowicz/jekyll-netlify-boilerplate)
-  provides the basics to get a fast, static website deployed on Netlify.
-  Features [Netlify CMS](https://www.netlifycms.org), responsive
-  CSS Grid layout, sample
-  pages and posts, and a continuous deployment workflow.
+intro_paragraph: >-
+  I am a web and mobile developer based in Brooklyn, NY. Currently, I'm focused
+  on building on building EdTech solutions to connect people with education and
+  training resorces at [WhereWeGo](https://wherewego.org).
+
+
+
+
+  I am always looking for freelance opportunities. Let's talk!
 ---
