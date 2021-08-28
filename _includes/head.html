@@ -1,18 +1,24 @@
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   {% if page.section == "home" %}
-    <title>{{ site.title }}</title>
-    <meta name="description" content="{{ site.description }}">
+  <title>{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}" />
   {% else %}
-    <title>{{ page.title }}</title>
-    {% if page.meta_description %}
-      <meta name="description" content="{{ page.meta_description }}">
-    {% endif %}
-  {% endif %}
-  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-  {% if jekyll.environment == 'production' and site.analytics %}
-    {% include analytics.html %}
-  {% endif %}
-  <script async src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <title>{{ page.title }}</title>
+  {% if page.meta_description %}
+  <meta name="description" content="{{ page.meta_description }}" />
+  {% endif %} {% endif %} <link rel="stylesheet" href="{{ "/assets/main.min.css"
+  | relative_url }}"> {% if jekyll.environment == 'production' and
+  site.analytics %} {% include analytics.html %} {% endif %}
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap"
+    rel="stylesheet"
+  />
+  <script
+    async
+    src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+  ></script>
 </head>

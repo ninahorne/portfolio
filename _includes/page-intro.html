@@ -3,7 +3,8 @@
     <p class="intro">
       {{ page.intro_paragraph | markdownify | remove: '<p>' | remove: '</p>' }}
     </p>
-    <img src="{{page.image}}"  />
+
+    <img class="headshot" src="{{page.image}}"  />
   </div>
 
 {% endif %}

@@ -754,7 +754,21 @@ footer > small {
   grid-column: main;
 }
 
-.grid__two-column {
+.grid__two-columns {
   display: grid;
-  columns: 50% 50%;
+  grid-template-columns: 50% 50%;
+}
+
+.heading__fancy {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 3rem;
+  text-shadow: 0 0 3px black, 0 0 5px black;
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.headshot {
+  border-radius: 100%;
+  border: 5px solid black;
 }/*# sourceMappingURL=main.min.css.map */
