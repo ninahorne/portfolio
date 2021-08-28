@@ -12,4 +12,5 @@ intro_paragraph: >-
 
 
   I am always looking for freelance opportunities. Let's talk!
+image: /assets/img/uploads/head-shot.jpeg
 ---
