@@ -752,4 +752,9 @@ footer {
 }
 footer > small {
   grid-column: main;
+}
+
+.grid__two-column {
+  display: grid;
+  columns: 50% 50%;
 }/*# sourceMappingURL=main.min.css.map */

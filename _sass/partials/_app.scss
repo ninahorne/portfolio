@@ -180,3 +180,9 @@ footer {
     grid-column: main;
   }
 }
+
+// generic grid
+.grid__two-column{
+  display: grid;
+  columns: 50% 50%;
+}

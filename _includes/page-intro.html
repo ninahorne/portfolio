@@ -1,5 +1,9 @@
 {% if page.intro_paragraph and page.intro_paragraph != '' %}
-  <p class="intro">
-    {{ page.intro_paragraph | markdownify | remove: '<p>' | remove: '</p>' }}
-  </p>
+  <div class="grid__two-columns">
+    <p class="intro">
+      {{ page.intro_paragraph | markdownify | remove: '<p>' | remove: '</p>' }}
+    </p>
+    <img src="{{page.image}}"  />
+  </div>
+
 {% endif %}
