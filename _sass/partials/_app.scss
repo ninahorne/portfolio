@@ -5,15 +5,20 @@
 // declared beforehand, and a @supports feature query to reset fallbacks when
 // necessary. https://rachelandrew.co.uk/css/cheatsheets/grid-fallbacks
 
+@use "sass:map";
+
 // the body element is our primary layout grid
+
 body {
   height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
   grid-template-columns:
     [full-start] minmax(1rem, 1fr)
-    [main-start] minmax(0, 104rem) [main-end]
+    [main-start] minmax(0, 80rem) [main-end]
     minmax(1rem, 1fr) [full-end];
+  background: linear-gradient(100deg, #272727 0%, $dark-sky-blue 80%);
+  cursor: url('/assets/img/icons/rocket.jpg'),auto;
 }
 
 // by default, make any new children of body to span the full track
@@ -27,8 +32,9 @@ body > * {
 header {
   grid-column: full;
   display: grid;
-  background-color: $brand-color;
+  border-bottom: 1px solid white;
   padding: 2rem;
+  background-color: transparent;
   @media screen and (min-width: $screen-sm-min) {
     grid-template-columns: 1fr auto;
     grid-column-gap: 1rem;
@@ -46,13 +52,9 @@ header > h1 {
   a:visited {
     text-decoration: none;
     border: 0;
-    color: white;
     @media screen and (min-width: $screen-sm-min) {
       padding: 1rem;
     }
-  }
-  a:hover {
-    color: white;
   }
 }
 
@@ -72,7 +74,6 @@ header > nav {
       }
       a,
       a:visited {
-        color: white;
         text-decoration: none;
         border: 0;
         @media screen and (min-width: $screen-sm-min) {
@@ -81,9 +82,6 @@ header > nav {
         &[data-current="current page"] {
           // you can add an active nav item style here
         }
-      }
-      a:hover {
-        color: white;
       }
     }
   }
@@ -181,25 +179,103 @@ footer {
   }
 }
 
+// backgrounds
+.background--trans-yellow {
+  background-color: $trans-yellow;
+  padding: 2rem;
+  border-radius: 5px;
+}
+// flexbox styles
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 // generic grid
-.grid__two-columns{
+.grid__two-columns {
   display: grid;
   grid-template-columns: 50% 50%;
 }
 
-
-
 // components
-.heading__fancy{
-  font-family: 'Noto Sans KR', sans-serif;
-  font-size: 3rem;
-  text-shadow: 0 0 3px black, 0 0 5px black;
-  // TODO provide a fall back
-  background: -webkit-linear-gradient(#eee, #333);
+.heading__fancy {
+  font-family: "Orelega One", serif;
+  font-weight: 900;
+  font-size: 6rem;
+  color: $green;
+  // background: -webkit-linear-gradient(
+  //   left,
+  //   $pink,
+  //   $purple,
+  //   $green,
+  //   $yellow,
+  //   $orange
+  // );
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  // -webkit-text-fill-color: transparent;
+  // -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: $color2;
+  text-shadow: 2px 2px 0px white;
 }
-.headshot{
-  border-radius: 100%;
-  border: 5px solid black;
+.headshot {
+  border-radius: 20px;
+  border: 5px solid $purple;
+  width: 20rem;
+  display: center;
+  margin: 0 auto;
+}
+
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+
+  .star {
+    position: absolute;
+    border-radius: 100px;
+  }
+}
+
+$colors: (
+  1: $color1,
+  2: $color2,
+  3: $color3,
+  4: $color4,
+  5: $color5,
+);
+
+@keyframes twinkle{
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+@for $i from 1 through (1000) {
+  .star:nth-of-type(#{$i}) {
+    $size: random(3) + px;
+    $delay: random(3) + s;
+    $color: map.get($colors, random(5));
+    top: random(100) + vh;
+    left: random(100) + vw;
+    width: $size;
+    height: $size;
+    background-color: $color;
+    @if($i%5 == 0) {
+      animation-name: twinkle;
+      animation-duration: $delay;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-delay: $delay;
+    }
+    
+    
+  }
 }

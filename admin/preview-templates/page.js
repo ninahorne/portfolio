@@ -17,4 +17,11 @@ const Page = createClass({
   }
 });
 
+
+setTimeout(()=>{
+  generate60Stars();
+}, 100)
+
+
+
 export default Page;
