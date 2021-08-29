@@ -1,3 +1,8 @@
+<!-- {% assign image_files = site.static_files | where: "image", true %}
+    {% for myimage in image_files %}
+      {{ myimage.path }}
+    {% endfor %} -->
+
 {% if page.intro_paragraph and page.intro_paragraph != '' %}
   <div class="grid__two-columns">
     <div>
@@ -6,8 +11,12 @@
         {{ page.intro_paragraph | markdownify | remove: '<p>' | remove: '</p>' }}
       </p>
     </div>
-   
+
    
   </div>
+  <div  class="moon"> 
 
+    <img class="rellax" data-rellax-speed="2" src="/assets/img/moon.png" />
+  </div>
+  <div style="height: 100vh;"></div>
 {% endif %}
