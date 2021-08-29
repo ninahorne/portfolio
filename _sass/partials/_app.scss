@@ -24,6 +24,8 @@ body {
     [main-start] minmax(0, 80rem) [main-end]
     minmax(1rem, 1fr) [full-end];
   z-index: 1;
+  background: linear-gradient(100deg, #272727 0%, $dark-sky-blue 80%);
+
 }
 
 // by default, make any new children of body to span the full track
