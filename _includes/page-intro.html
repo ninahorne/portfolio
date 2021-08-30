@@ -3,7 +3,7 @@
 {% if page.intro_paragraph and page.intro_paragraph != '' %}
 <div class="container">
   <div class="rellax" data-rellax-speed="-2">
-    <p class="subtitle">WEB AND MOBILE DEVELOPER</p>
+    <p class="subtitle">WEB + MOBILE DEVELOPER</p>
 
     <h2 class="heading--fancy">{{ page.title }}</h2>
     <div class="row">
@@ -11,6 +11,7 @@
         <p class="intro">
           {{ page.intro_paragraph | markdownify | remove: '<p>' | remove: '</p>' }}
         </p>
+        <button>Let's Talk!</button>
       </div>
     </div>
 
