@@ -11,7 +11,7 @@ function generate60Stars() {
 
   stars.setAttribute('style', `height: ${bodyHeight}px`)
   document.body.appendChild(stars);
-  for (let i = 0; i < 1000; i++) {
+  for (let i = 0; i < 500; i++) {
     let star = document.createElement("div");
     star.classList.add("star");
     const top = Math.random()*bodyHeight + 'px';
