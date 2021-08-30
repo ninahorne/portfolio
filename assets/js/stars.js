@@ -20,7 +20,6 @@ function generate60Stars() {
     if(i%5 === 0){
         const randomNumber = Math.round(Math.random()*10);
         const direction = randomNumber % 2 == 0 ? -1 : 1;
-        // star.setAttribute('data-rellax-speed', direction * Math.round(Math.random()*5));
     }
    
     const stars = document.querySelector(".stars");

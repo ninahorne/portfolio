@@ -25,9 +25,13 @@ body {
     minmax(1rem, 1fr) [full-end];
   z-index: 1;
   background: linear-gradient(100deg, #272727 0%, $dark-sky-blue 80%);
-
 }
 
+.container {
+  width: 1140px;
+  max-width: 100%;
+  margin: 0 auto;
+}
 // by default, make any new children of body to span the full track
 body > * {
   grid-column: full;
@@ -207,11 +211,13 @@ footer {
 }
 
 // components
-.heading__fancy {
+.heading--fancy {
   font-family: "Orelega One", serif;
   font-weight: 900;
   font-size: 6rem;
   color: $green;
+  margin-bottom: 0;
+  padding-bottom: 0;
   // background: -webkit-linear-gradient(
   //   left,
   //   $pink,
@@ -292,10 +298,9 @@ $colors: (
 
 .moon {
   position: absolute;
-  top: 200px;
-  right: 20vw;
-  width: 300px;
-  height: 300px;
+  top: -300px;
+  right: -406px;
+  width: 1200px;
 }
 @mixin shooting-star-template($starSize, $speed, $animationName) {
   z-index: 3;
@@ -318,10 +323,9 @@ $starFieldWidth: 100;
 $starFieldHeight: 100;
 
 .shooting-star-1 {
-  @include shooting-star-template( 2px, 5s, animShootingStarOne);
+  @include shooting-star-template(2px, 5s, animShootingStarOne);
   animation-delay: 5s;
 }
-
 
 @keyframes animShootingStarOne {
   from {
@@ -331,25 +335,25 @@ $starFieldHeight: 100;
   }
 
   to {
-    transform: translateY(-150vh)
-      translateX(-100vh) rotate(-45deg);
+    transform: translateY(-150vh) translateX(-100vh) rotate(-45deg);
     opacity: 0.3;
     height: 300px;
   }
 }
 
-.rocket-trail-wrapper {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  left: 0;
-  right: 0;
 
-  .rocket-trail {
-    height: 10px;
-    width: 10px;
-    border: 1px solid black;
-    background-color: orange;
-    display: inline-block;
+.white-parallelogram {
+  background-color: white;
+  transform: skew(-20deg);
+  border-radius: 5px;
+  padding: 1rem;
+  box-shadow: 1px 1px 4px grey;
+  width: calc(60% + 100px);
+  position: relative;
+  left: -100px;
+  padding-left: 120px;
+  p {
+
+    transform: translateY(20px) skew(20deg);
   }
 }

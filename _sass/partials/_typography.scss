@@ -46,8 +46,17 @@ p.intro {
 
 p, li, a, div {
   font-size: 1rem;
-  font-family: 'Noto Sans KR', monospace;
-  color: black;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: white;
+}
+p.subtitle {
+  font-family: 'Source Code Pro', monospace;
+  color: white;
+  font-style: italic;
+  font-weight: 900;
+  font-size: 1.3rem;
+  color: white;
+
 }
 
 h1,h2,h3,h4,h5,h6 {

@@ -1,22 +1,26 @@
-<!-- {% assign image_files = site.static_files | where: "image", true %}
-    {% for myimage in image_files %}
-      {{ myimage.path }}
-    {% endfor %} -->
+
 
 {% if page.intro_paragraph and page.intro_paragraph != '' %}
-  <div class="grid__two-columns">
-    <div>
-      <h2 class="heading__fancy">{{ page.title }}</h2>
-      <p class="intro">
-        {{ page.intro_paragraph | markdownify | remove: '<p>' | remove: '</p>' }}
-      </p>
+<div class="container">
+  <div class="rellax" data-rellax-speed="-2">
+    <h2 class="heading--fancy">{{ page.title }}</h2>
+    <p class="subtitle">WEB AND MOBILE DEVELOPER</p>
+    <div class="row">
+      <div class="col-6">
+        <p class="intro">
+          {{ page.intro_paragraph | markdownify | remove: '<p>' | remove: '</p>' }}
+        </p>
+      </div>
     </div>
 
-   
   </div>
-  <div  class="moon"> 
 
-    <img class="rellax" data-rellax-speed="2" src="/assets/img/moon.png" />
-  </div>
-  <div style="height: 100vh;"></div>
+</div>
+
+<div  class="moon"> 
+
+<img class="rellax" data-rellax-speed="2" src="/assets/img/moon.png" />
+</div>
+<div style="height: 100vh;"></div>
+
 {% endif %}
