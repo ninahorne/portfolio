@@ -39,6 +39,8 @@ h1,h2,h3,h4,h5,h6,figure {
 
 p.intro {
   padding-bottom: 4rem;
+  letter-spacing: 0.5px;
+  font-size: 1.5rem;
   @media screen and (min-width: $screen-sm-min) {
     padding-bottom: 4rem;
   }
@@ -49,15 +51,7 @@ p, li, a, div {
   font-family: 'Noto Sans KR', sans-serif;
   color: white;
 }
-p.subtitle {
-  font-family: 'Source Code Pro', monospace;
-  color: white;
-  font-style: italic;
-  font-weight: 900;
-  font-size: 1.3rem;
-  color: white;
 
-}
 
 h1,h2,h3,h4,h5,h6 {
   font-weight: $bold-font-weight;
@@ -71,6 +65,17 @@ h2 {
 
 h3 {
   font-size: 2rem;
+}
+
+p.subtitle {
+  font-family: 'Source Code Pro', monospace;
+  font-style: italic;
+  font-weight: 900;
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 0;
+  padding-bottom: 0;
+
 }
 
 code {
