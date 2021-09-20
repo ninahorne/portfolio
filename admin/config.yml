@@ -62,3 +62,13 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Images", name: "images", widget: "image", allow_multiple: true}
       - {label: "Case Study Details", name: "case_study_details", widget: "markdown", required: false}
       - {label: "Tech Stack Details", name: "tech_stack_details", widget: "markdown", required: false}
+  # SKILLS
+  - name: "skills"
+    label: "Skills"
+    folder: "skills"
+    sort: "name:asc"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Skill Name", name: "name", widget: "string", tagname: "h2"}
+      - {label: "Images", name: "images", widget: "image"}
