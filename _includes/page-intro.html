@@ -1,17 +1,16 @@
 
 
 {% if page.intro_paragraph and page.intro_paragraph != '' %}
-  <div>
-    <!-- <p class="subtitle">WEB + MOBILE DEVELOPER</p> -->
+  <div class="intro-paragraph">
 
-    <h2 class="heading--fancy">{{ page.title }}</h2>
+    <h2>{{ page.title }}</h2>
         <p class="intro">
           {{ page.intro_paragraph | markdownify | remove: '<p>' | remove: '</p>' }}
         </p>
         <button>Let's Talk!</button>
 
   </div>
-  <section class="section__my-work">
+  <!-- <section class="section__my-work">
     <h2>My Work</h2>
       <!-- Swiper -->
       <div class="row">
@@ -81,7 +80,7 @@
     
   
 
-    </section>
+    </section> -->
 
 
 {% endif %}

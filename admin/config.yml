@@ -57,11 +57,8 @@ collections: # A list of collections the CMS should be able to edit
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
       - {label: "Project Title", name: "title", widget: "string", tagname: "h2"}
-      - {label: "Project Type", name: "project_type", widget: "string", required: false}
       - {label: "Description", name: "description", widget: "string"}
-      - {label: "Images", name: "images", widget: "image", allow_multiple: true}
-      - {label: "Case Study Details", name: "case_study_details", widget: "markdown", required: false}
-      - {label: "Tech Stack Details", name: "tech_stack_details", widget: "markdown", required: false}
+      - {label: "Tech Stack Details", name: "tech_stack_details", widget: "string", required: false, allow_multiple: true}
   # SKILLS
   - name: "skills"
     label: "Skills"
