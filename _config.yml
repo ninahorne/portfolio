@@ -16,8 +16,7 @@
 title: Nina Horne - Web Developer
 email: nina.horne1221@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Nina Horne is based in Brooklyn, NY and  provides high-quality, affordable
-  freelance web development services.
+  Nina Horne is a JavaScript developer based in Brooklyn, NY.
 baseurl: "" # the subpath of your site if applicable, e.g. /blog
 url: "https://ninahorne.io" # the base hostname & protocol for your site, e.g. https://example.com
 
@@ -51,6 +50,18 @@ defaults:
     values:
       layout: "post" # set the correct default template for a post
       section: "post" # set the root section name
+  - scope:
+      path: "" # an empty string here means all files in the project
+      type: "pages" # previously `post` in Jekyll 2.2.
+    values:
+      layout: "page" # set the correct default template for a post
+      section: "page" # set the root section name
+  - scope:
+      path: "" # an empty string here means all files in the project
+      type: "projects" # previously `post` in Jekyll 2.2.
+    values:
+      layout: "project" # set the correct default template for a post
+      section: "project" # set the root section name
  
 # Build settings
 markdown: kramdown
