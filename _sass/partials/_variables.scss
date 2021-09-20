@@ -1,26 +1,24 @@
 // theme colors
-$pink: #D96AB2;
-$purple: #46268C;
-$green: #06BF9D;
-$yellow: #D9C45B;
-$orange: #F24607;
-$black: #272727;
-$outer-space-crayola: #293B40;
-$dark-sky-blue: #102E4A;
-$color1: #ABC7D9;
-$color2: #5EAFE6;
-$color3: #A3C3D9;
-$color4: #CCD6EB;
-$color5: #E9ECF5;
+$font-color: #272727;
+$background: #dfdfdf;
+$light: #C3DBC5;
+$main: #8789C0;
+$border-gray: #ddd;
+// #D64045
+$contrast: #FF6B6C;
 
-$dark: $color1;
+// $english-violet: #56445D;
+// $verdigris: #4CB5AE;
+// $light: $english-violet;
+// $dark: $verdigris;
+
 
 // site colours
 $text-color: black;
-$text-color-negative: $green;
-$brand-color: $purple;
-$link-color: rgb(0,114,154);
-$link-hover-color: rgb(0,57,78);
+$text-color-negative: $light;
+$brand-color: $main;
+$link-color: $contrast;
+$link-hover-color: $contrast;
 $grey-bg-color: rgb(243,243,243);
 $hairline-color: rgb(230,230,230);
 $selection-bg-color: rgba(255,255,100,0.5);

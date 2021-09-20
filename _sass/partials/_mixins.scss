@@ -3,12 +3,14 @@
 // A basic button
 @mixin button($btn-bg, $btn-text) {
   font-weight: $bold-font-weight;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2rem;
 	line-height: $base-line-height;
 	color: $btn-text;
 	background-color: $btn-bg;
 	border: 3px solid $btn-bg;
   border-radius: 200px !important;
+  font-family: 'Noto Sans KR', sans-serif;
+  box-shadow: 1px 1px 2px grey;
 
 }
 

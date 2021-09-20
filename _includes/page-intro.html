@@ -1,28 +1,87 @@
 
 
 {% if page.intro_paragraph and page.intro_paragraph != '' %}
-<div class="container">
-  <div class="rellax" data-rellax-speed="-2">
-    <p class="subtitle">WEB + MOBILE DEVELOPER</p>
+  <div>
+    <!-- <p class="subtitle">WEB + MOBILE DEVELOPER</p> -->
 
     <h2 class="heading--fancy">{{ page.title }}</h2>
-    <div class="row">
-      <div class="col-6">
         <p class="intro">
           {{ page.intro_paragraph | markdownify | remove: '<p>' | remove: '</p>' }}
         </p>
         <button>Let's Talk!</button>
-      </div>
-    </div>
 
   </div>
+  <section class="section__my-work">
+    <h2>My Work</h2>
+      <!-- Swiper -->
+      <div class="row">
+        <div class="col-md-3">
+          <div class="project">
+            <h3>New Orleans Training Navigator</h3>
+            <p>A web app built for the Greater New Orleans area to assist users in discovering and comparing
+              workforce training opportunities.
+            </p>
+            <div class="project__icons">
+              <p class="subtitle">ANGULAR + ASP.NET CORE + AZURE DEVOPS</p>
+            </div>
+            <div class="project__links">
+              <a target="_blank" href="https://explore.wherewego.org">View Site &nbsp;<i class="fas fa-external-link-alt"></i></a>
+            </div>
+         
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="project">
+            <h3>Rexchange - The Real Estate Exchange</h3>
+            <p>A gameified mobile app where locals can value houses like the stock exchange.
+            </p>
+            <div class="project__icons">
+              <p class="subtitle">NATIVESCRIPT ANGULAR + FIREBASE</p>
+    
+            </div>
+            <div class="project__links">
+              <a data-fslightbox="rexchange" href="../assets/img/rexchange-1.jpeg">View Slideshow &nbsp;<i class="far fa-images"></i></a>
+              <a data-fslightbox="rexchange" href="../assets/img/rexchange-2.jpeg"></a>
+              <a data-fslightbox="rexchange" href="../assets/img/rexchange-3.jpeg"></a>
 
-</div>
+            </div>
+            
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="project">
+            <h3>ClinicCases - Law School Case Management Software</h3>
+            <p>A UI/UX redesign of a software to assist law school students in mangaging their caseloads
+            </p>
+            <div class="project__icons">
+              <p class="subtitle">ADOBE XD + PHP + HTML + CSS + JS</p>
+            </div>
+            <div class="project__links">
+              <a>View Slideshow &nbsp;<i class="far fa-images"></i></a>
+            </div>
+         
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="project">
+            <h3>LA Board of Regents Dual Enrollment</h3>
+            <p>A portal for learning about dual enrollment offerings in Louisiana
+            </p>
+            <div class="project__icons">
+              <p class="subtitle">WORDPRESS + ALGOLIA + GOOGLE MAPS API</p>
+            </div>
+            <div class="project__links">
+              <a>View Slideshow &nbsp;<i class="far fa-images"></i></a>
+            </div>
+         
+          </div>
+        </div>
+      </div>
+     
+    
+  
 
-<div  class="moon"> 
+    </section>
 
-<img class="rellax" data-rellax-speed="2" src="/assets/img/moon.png" />
-</div>
-<div style="height: 100vh;"></div>
 
 {% endif %}

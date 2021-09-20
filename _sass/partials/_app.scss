@@ -8,15 +8,12 @@
 @use "sass:map";
 
 // the body element is our primary layout grid
-html {
-  cursor: url("/assets/img/icons/rocket.png"), auto;
-}
 
 body {
   perspective: 1px;
   overflow-x: hidden;
   overflow-y: auto;
-  // display: grid;
+  display: grid;
 
   grid-template-rows: auto 1fr auto;
   grid-template-columns:
@@ -24,7 +21,7 @@ body {
     [main-start] minmax(0, 80rem) [main-end]
     minmax(1rem, 1fr) [full-end];
   z-index: 1;
-  background: linear-gradient(100deg, #272727 0%, $dark-sky-blue 80%);
+  background: $background;
 }
 
 .container {
@@ -43,9 +40,9 @@ body > * {
 header {
   grid-column: full;
   display: grid;
-  border-bottom: 1px solid white;
-  padding: 2rem;
-  background-color: transparent;
+  border-bottom: 1px solid $border-gray;
+
+  padding: 1rem;
   @media screen and (min-width: $screen-sm-min) {
     grid-template-columns: 1fr auto;
     grid-column-gap: 1rem;
@@ -71,24 +68,42 @@ header > h1 {
 
 // main menu, is a grid item
 header > nav {
+ 
   @media screen and (min-width: $screen-sm-min) {
     float: right;
   }
   ul {
     // flexbox is better than grid for distributing an unknown qty of children
     display: flex;
+    padding-bottom: 0;
+    margin-bottom: 0;
     li {
       margin-right: 2rem;
       display: inline-block;
+
       @media screen and (min-width: $screen-sm-min) {
         margin-right: 0;
       }
       a,
       a:visited {
+        font-family: "Noto Sans KR", sans-serif;
+        color: $main;
         text-decoration: none;
         border: 0;
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+        font-weight: 400;
+        &:hover {
+          color: $main;
+          text-decoration: none;
+          -webkit-transform: scale(1.1);
+          -moz-transform: scale(1.1);
+          -o-transform: scale(1.1);
+          transform: scale(1.1);
+        }
         @media screen and (min-width: $screen-sm-min) {
-          padding: 1rem;
+          padding: 0 1rem;
         }
         &[data-current="current page"] {
           // you can add an active nav item style here
@@ -215,145 +230,102 @@ footer {
   font-family: "Orelega One", serif;
   font-weight: 900;
   font-size: 6rem;
-  color: $green;
+  letter-spacing: 1px;
   margin-top: 0;
   padding-top: 0;
-  // background: -webkit-linear-gradient(
-  //   left,
-  //   $pink,
-  //   $purple,
-  //   $green,
-  //   $yellow,
-  //   $orange
-  // );
+  padding-bottom: 1rem;
+  background-color: transparent;
   -webkit-background-clip: text;
-  // -webkit-text-fill-color: transparent;
-  // -webkit-text-stroke-width: 0.5px;
-  -webkit-text-stroke-color: $color2;
-  text-shadow: 2px 2px 0px white;
-}
-.headshot {
-  border-radius: 20px;
-  border: 5px solid $purple;
-  width: 20rem;
-  display: center;
-  margin: 0 auto;
+  -webkit-text-fill-color: $main;
 }
 
-.stars {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  min-height: 100vh;
-  background: linear-gradient(100deg, #272727 0%, $dark-sky-blue 80%);
-  overflow: hidden;
-  .star {
-    position: absolute;
-    border-radius: 100px;
+
+.swiper{
+  width: 80rem;
+  margin: 3rem;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  color: $font-color;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+
+  & > * {
+    width: calc(80rem - 200px);
+    margin: 0 auto;
+  }
+
+}
+
+.section__my-work{
+  margin: 3rem 0;
+  h2 {
+    color: $main;
   }
 }
-
-$colors: (
-  1: $color1,
-  2: $color2,
-  3: $color3,
-  4: $color4,
-  5: $color5,
-);
-
-@keyframes twinkle {
-  0%,
-  80%,
-  100% {
-    opacity: 1;
-    transform: scale(1);
+.project{
+  h3{
+    color: $font-color;
+    text-align: left;
+    padding-bottom: 0.5rem;
   }
-  50% {
-    opacity: 0.3;
-    transform: scale(0.5);
+  p {
+    text-align: left;
+    padding: 0;
   }
-}
-
-@for $i from 1 through (1000) {
-  .star:nth-of-type(#{$i}) {
-    $size: random(3) + px;
-    $delay: random(5) + s;
-    $color: map.get($colors, random(5));
-    $duration: random(5) + s;
-
-    width: $size;
-    height: $size;
-    background-color: $color;
-    @if ($i%3 == 0) {
-      animation-name: twinkle;
-      animation-duration: $duration;
-      animation-timing-function: ease-in-out;
-      animation-iteration-count: infinite;
-      animation-delay: $delay;
+  .project__icons{
+    display: flex;
+    img {
+      width: 30px;
+      margin: 0rem 0.5rem;
     }
   }
-}
+  .project__links{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 1rem 0;
 
-.moon {
-  position: absolute;
-  top: -300px;
-  right: -406px;
-  width: 1200px;
-}
-@mixin shooting-star-template($starSize, $speed, $animationName) {
-  z-index: 3;
-  width: $starSize;
-  height: $starSize + 20px;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
-  position: absolute;
-  top: 100vh;
-  right: 0;
-  background: linear-gradient(
-    to top,
-    rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 1)
-  );
-  animation: $animationName $speed ease-in-out infinite;
-}
-
-$starFieldWidth: 100;
-$starFieldHeight: 100;
-
-.shooting-star-1 {
-  @include shooting-star-template(2px, 5s, animShootingStarOne);
-  animation-delay: 5s;
-}
-
-@keyframes animShootingStarOne {
-  from {
-    transform: translateY(0px) translateX(0px) rotate(-45deg);
-    opacity: 1;
-    height: 5px;
+    a:visited, a {
+      text-decoration: none;
+      margin-right: 1rem;
+      display: inline-block;
+    }
   }
+  .myWhereWeGoSwiper{
+    // height: 500px;
+    overflow: hidden;
+    max-height: 800px;
 
-  to {
-    transform: translateY(-150vh) translateX(-100vh) rotate(-45deg);
-    opacity: 0.3;
-    height: 300px;
-  }
-}
-
-
-.white-parallelogram {
-  background-color: white;
-  transform: skew(-20deg);
-  border-radius: 5px;
-  padding: 1rem;
-  box-shadow: 1px 1px 4px grey;
-  width: calc(60% + 100px);
-  position: relative;
-  left: -100px;
-  padding-left: 120px;
-  p {
-
-    transform: translateY(20px) skew(20deg);
+    img {
+      margin: 0 auto;
+      width: 500px;
+      max-width: 100%;
+    }
+    .swiper-slide{
+      height: 800px;
+      overflow: hidden;
+      display: block;
+    }
+    &.project__image--rexchange{
+      img { 
+        width: 33%;
+        display: inline-block;
+      }
+    }
   }
 }
