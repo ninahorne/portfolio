@@ -58,7 +58,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
       - {label: "Project Title", name: "title", widget: "string", tagname: "h2"}
       - {label: "Description", name: "description", widget: "string"}
-      - {label: "Tech Stack Details", name: "tech_stack_details", widget: "string", required: false, allow_multiple: true}
+      - {label: "Tech Stack Details", name: "tech_stack_details", widget: "list", required: false, allow_multiple: true}
   # SKILLS
   - name: "skills"
     label: "Skills"
