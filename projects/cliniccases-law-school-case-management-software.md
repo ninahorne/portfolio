@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: project
 title: ClinicCases - Law School Case Management Software
 description: A UI/UX redesign of a software to assist law school students in
   mangaging their caseloads

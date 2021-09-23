@@ -26,7 +26,11 @@ header {
 }
 
 nav  {
-  margin: 0 10rem;
+  width: 90rem;
+  max-width: 90rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   & > ul {
     display: flex;
     margin: 0;

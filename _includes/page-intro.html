@@ -10,10 +10,14 @@
         <button>Let's Talk!</button>
 
   </div>
-  <!-- <section class="section__my-work">
+  <section>
     <h2>My Work</h2>
-      <!-- Swiper -->
-      <div class="row">
+    {% for project in site.pages %}
+      {% if project.layout == 'project' %}
+         <h1>{{ project.title }}</h1>
+      {% endif %}
+    {% endfor %}
+      <!-- <div class="row">
         <div class="col-md-3">
           <div class="project">
             <h3>New Orleans Training Navigator</h3>
@@ -75,12 +79,12 @@
          
           </div>
         </div>
-      </div>
+      </div> -->
      
     
   
 
-    </section> -->
+    </section>
 
 
 {% endif %}

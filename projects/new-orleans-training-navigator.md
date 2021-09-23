@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: project
 title: New Orleans Training Navigator
 description: A web app built for the Greater New Orleans area to assist users in
   discovering and comparing workforce training opportunities.
