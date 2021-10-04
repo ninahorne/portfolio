@@ -124,7 +124,8 @@ collections: # A list of collections the CMS should be able to edit
       - { label: "Link", name: "link", widget: "string", required: false }
       - {
           label: "Images",
-          name: "list",
+          name: "images",
+          widget: 'list',
           default: ["none"],
           required: false
       }

@@ -15,6 +15,7 @@
     {% for project in site.pages %}
       {% if project.layout == 'project' %}
          <h1>{{ project.title }}</h1>
+         <p>{{project}}</p>
         <p>{{project.images}}</p>
         {% if project.images.size %}
           {% for image in project.images %}
