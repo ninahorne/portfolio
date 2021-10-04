@@ -15,7 +15,12 @@
     {% for project in site.pages %}
       {% if project.layout == 'project' %}
          <h1>{{ project.title }}</h1>
-      {% endif %}
+         <p>{{project}}</p>
+         {% for image in project.images %}
+         <p>{{ image }}</p>
+     
+    {% endfor %}
+      {% endif %} 
     {% endfor %}
       <!-- <div class="row">
         <div class="col-md-3">

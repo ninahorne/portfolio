@@ -7,6 +7,13 @@ backend:
 
 media_folder: "assets/img/uploads" # Folder where user uploaded files should go
 
+media_library:
+  name: cloudinary
+  config:
+    cloud_name: ninahornedev
+    api_key: 254278821486471
+  output_filename_only: true
+
 publish_mode: editorial_workflow # Enable drafts
 
 collections: # A list of collections the CMS should be able to edit
@@ -18,19 +25,39 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allow users to create new documents in this collection
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields: # The fields each document in this collection have
-      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
-      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
-      - {label: "Meta Description", name: "meta_description", widget: "string", required: false}
+      - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
+      - { label: "Title", name: "title", widget: "string", tagname: "h1" }
+      - {
+          label: "Meta Description",
+          name: "meta_description",
+          widget: "string",
+          required: false,
+        }
       - label: "Author"
         name: "author"
         widget: "select"
         options:
           - { label: "Dan Urbanowicz", value: "dan_urbanowicz" }
           - { label: "John Doe", value: "john_doe" }
-      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss"}
-      - {label: "Intro Paragraph", name: "intro_paragraph", widget: "markdown", required: false}
-      - {label: "Body", name: "body", widget: "markdown", required: false}
-      - {label: "Categories", name: "categories", widget: "string", required: false}
+      - {
+          label: "Publish Date",
+          name: "date",
+          widget: "datetime",
+          format: "YYYY-MM-DD HH:mm:ss",
+        }
+      - {
+          label: "Intro Paragraph",
+          name: "intro_paragraph",
+          widget: "markdown",
+          required: false,
+        }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+      - {
+          label: "Categories",
+          name: "categories",
+          widget: "string",
+          required: false,
+        }
     # PAGES
   - name: "page"
     label: "Page"
@@ -39,14 +66,34 @@ collections: # A list of collections the CMS should be able to edit
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
-      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
-      - {label: "Meta Description", name: "meta_description", widget: "string", required: false}
-      - {label: "Permalink", name: "permalink", widget: "hidden"}
-      - {label: "Section", name: "section", widget: "hidden", default: "{{name}}"}
-      - {label: "Intro Paragraph", name: "intro_paragraph", widget: "markdown", required: false}
-      - {label: "Body", name: "body", widget: "markdown", required: false}
-      - {label: "Featured Image", name: "image", widget: "image", required: false}
+      - { label: "Layout", name: "layout", widget: "hidden", default: "page" }
+      - { label: "Title", name: "title", widget: "string", tagname: "h1" }
+      - {
+          label: "Meta Description",
+          name: "meta_description",
+          widget: "string",
+          required: false,
+        }
+      - { label: "Permalink", name: "permalink", widget: "hidden" }
+      - {
+          label: "Section",
+          name: "section",
+          widget: "hidden",
+          default: "{{name}}",
+        }
+      - {
+          label: "Intro Paragraph",
+          name: "intro_paragraph",
+          widget: "markdown",
+          required: false,
+        }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+      - {
+          label: "Featured Image",
+          name: "image",
+          widget: "image",
+          required: false,
+        }
   # PROJECTS
   - name: "projects"
     label: "Project"
@@ -55,12 +102,32 @@ collections: # A list of collections the CMS should be able to edit
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "project"}
-      - {label: "Project Title", name: "title", widget: "string", tagname: "h2"}
-      - {label: "Description", name: "description", widget: "string"}
-      - {label: "Tech Stack Details", name: "tech_stack_details", widget: "list", default: ['none']}
-      - {label: "Link", name: "link", widget: "string", required: false}
-
+      - {
+          label: "Layout",
+          name: "layout",
+          widget: "hidden",
+          default: "project",
+        }
+      - {
+          label: "Project Title",
+          name: "title",
+          widget: "string",
+          tagname: "h2",
+        }
+      - { label: "Description", name: "description", widget: "string" }
+      - {
+          label: "Tech Stack Details",
+          name: "tech_stack_details",
+          widget: "list",
+          default: ["none"],
+        }
+      - { label: "Link", name: "link", widget: "string", required: false }
+      - {
+          label: "Images",
+          name: "list",
+          default: ["none"],
+          required: false
+      }
   # SKILLS
   - name: "skills"
     label: "Skills"
@@ -69,5 +136,5 @@ collections: # A list of collections the CMS should be able to edit
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Skill Name", name: "name", widget: "string", tagname: "h2"}
-      - {label: "Images", name: "images", widget: "image"}
+      - { label: "Skill Name", name: "name", widget: "string", tagname: "h2" }
+      - { label: "Images", name: "images", widget: "image" }
