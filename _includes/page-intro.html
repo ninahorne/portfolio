@@ -15,15 +15,18 @@
     {% for project in site.pages %}
       {% if project.layout == 'project' %}
          <h1>{{ project.title }}</h1>
-    <p>{{project.images}}</p>
+
         {% if project.images.size %}
-            <a
-            data-fslightbox="{{project.title}}"
-            href="{{image}}"
-            >
-            View Gallery
-          </a>
-          {% for image in project.images %}
+
+          {% for image in project.images%}
+          {% if forloop.index == 1 %}
+          <a
+          data-fslightbox="{{project.title}}"
+          href="{{image}}"
+          >
+          View Gallery
+        </a>
+        {% endif %}
             <a
             data-fslightbox="{{project.title}}"
             href="{{image}}"

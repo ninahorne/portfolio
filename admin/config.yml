@@ -122,6 +122,7 @@ collections: # A list of collections the CMS should be able to edit
           default: ["none"],
         }
       - { label: "Link", name: "link", widget: "string", required: false }
+      - { label: "GitHub Repo", name: "repo", widget: "string", required: false }
       - {
           label: "Images",
           name: "images",
