@@ -156,3 +156,40 @@ footer {
 }
 
 
+.projects{
+  display: flex;
+  flex-wrap: wrap;
+
+  .project{
+    flex: 1 0 auto;
+    width: calc(33% - 2rem);
+    max-width: calc(33% - 20px);
+    border: 2px solid black;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 4px 4px 0px black;
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    justify-content: space-between;
+
+    .project__tech-stack{
+      @include code-font();
+      text-transform: uppercase;
+    }
+    .project__links{
+      align-self: flex-end;
+      justify-self: flex-end;
+      
+      a{
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        color: black;
+        a:visited{
+          color: inherit;
+        }
+      }
+    }
+  }
+}

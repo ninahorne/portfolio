@@ -3,10 +3,11 @@
 // fonts
 $title-font: 'Orelega One', serif;
 $base-font: 'Noto Sans KR', sans-serif;
+$code-font: 'Source Code Pro', serif;
 
 // base sizes
 $base-font-size: 10px;
-$base-line-height: 10px;
+$base-line-height: 1.5;
 $base-font-weight: 400;
 $title-font-weight: 900;
 $bold-font-weight: $title-font-weight;
@@ -33,4 +34,9 @@ $screen-xl-min: 1920px;
 @mixin base-font(){
     font-family: $base-font;
     font-weight: $base-font-weight;
+}
+
+@mixin code-font(){
+    font-family: $code-font;
+    font-weight: $title-font-weight;
 }

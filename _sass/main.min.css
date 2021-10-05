@@ -479,7 +479,7 @@ button {
   font-weight: 400;
   font-weight: 900;
   padding: 1rem 2rem;
-  line-height: 10px;
+  line-height: 1.5;
   color: #076f92;
   background-color: rgba(206, 241, 253, 0.3);
   border: 3px solid #076f92;
@@ -504,7 +504,7 @@ html {
 body {
   color: black;
   font-family: "Noto Sans KR", sans-serif;
-  line-height: 10px;
+  line-height: 1.5;
   font-weight: 400;
   font-style: normal;
   font-variant: normal;
@@ -520,7 +520,7 @@ h6,
 p,
 figure,
 time {
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 
 p + h1, figure + h1,
@@ -543,13 +543,14 @@ p {
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 400;
 }
-p a, p a:visited {
+p a,
+p a:visited {
   color: #076f92;
   border: none;
 }
 @media screen and (min-width: 768px) {
   p {
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
   }
 }
 
@@ -559,6 +560,16 @@ a,
 div {
   font-size: 1rem;
   font-family: "Noto Sans KR", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Orelega One", serif;
+  font-weight: 900;
 }
 
 h2 {
@@ -597,6 +608,11 @@ a:hover,
 a:active {
   text-decoration: underline;
   border: 0;
+}
+
+h1 {
+  font-size: 1.75rem;
+  line-heighT: 1;
 }
 
 body {
@@ -718,4 +734,40 @@ footer > small {
   padding-top: 0;
   padding-bottom: 1rem;
   color: #076f92;
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+}
+.projects .project {
+  flex: 1 0 auto;
+  width: calc(33% - 2rem);
+  max-width: calc(33% - 20px);
+  border: 2px solid black;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 4px 4px 0px black;
+  display: flex;
+  flex-direction: column;
+  height: 250px;
+  justify-content: space-between;
+}
+.projects .project .project__tech-stack {
+  font-family: "Source Code Pro", serif;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.projects .project .project__links {
+  align-self: flex-end;
+  justify-self: flex-end;
+}
+.projects .project .project__links a {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: black;
+}
+.projects .project .project__links a a:visited {
+  color: inherit;
 }/*# sourceMappingURL=main.min.css.map */

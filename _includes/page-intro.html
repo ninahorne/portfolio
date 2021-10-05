@@ -12,32 +12,65 @@
   </div>
   <section>
     <h2>My Work</h2>
-    {% for project in site.pages %}
+    <div class="projects">
+      {% for project in site.pages %}
       {% if project.layout == 'project' %}
-         <h1>{{ project.title }}</h1>
+      <div class="project">
+        <h1>{{ project.title }}</h1>
+        <p class="project__tech-stack">
+          {% for tech in project.tech_stack_details %}
+              {{ tech }} 
+              {% if forloop.index != project.tech_stack_details.size %}
+                +
+              {% endif %}
+          {% endfor %}
+        </p>
 
-        {% if project.images.size %}
+        <p>{{project.description}}</p>
 
-          {% for image in project.images%}
-          {% if forloop.index == 1 %}
-          <a
-          data-fslightbox="{{project.title}}"
-          href="{{image}}"
-          >
-          View Gallery
-        </a>
-        {% endif %}
+
+        <div class="project__links">
+            {% if project.images.size %}
+            <div class="project__link">
+
+            {% for image in project.images%}
+              {% if forloop.index == 1 %}
+                <a
+                data-fslightbox="{{project.title}}"
+                href="{{image}}"
+                >
+                  <i class="fas fa-image"></i>&nbsp;&nbsp;View Gallery
+                </a>
+              {% endif %}
             <a
             data-fslightbox="{{project.title}}"
             href="{{image}}"
             >
-          </a>
-  
-          {% endfor %}
-        {% endif %} 
+            </a>
+            {% endfor %}
+          </div>
+
+          {% endif %} 
+
+          {% if project.link %}
+            <div class="project__link">
+              <a target="_blank" href="{{project.link}}">
+                <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp;View Project
+              </a>
+            </div>
+          {% endif %}
+
+          
+
+        </div>
+
+
+      </div>
 
       {% endif %} 
     {% endfor %}
+    </div>
+
       <!-- <div class="row">
         <div class="col-md-3">
           <div class="project">
