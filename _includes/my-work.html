@@ -1,0 +1,44 @@
+<section id="myWork" class="projects__container">
+    <div class="container">
+      <h3>Recent Work</h3>
+      <div class="projects">
+        {% for project in site.pages %} {% if project.layout == 'project' %}
+        <div class="project">
+          <div>
+            <h6>{{ project.title }}</h6>
+            <p class="project__tech-stack">
+              {% for tech in project.tech_stack_details %} {{ tech }} {% if
+              forloop.index != project.tech_stack_details.size %} + {% endif %} {%
+              endfor %}
+            </p>
+          </div>
+  
+          <p>{{project.description}}</p>
+  
+          <div class="project__links">
+            {% if project.images.size %}
+            <div class="project__link">
+              {% for image in project.images%} {% if forloop.index == 1 %}
+              <a data-fslightbox="{{project.title}}" href="{{image}}">
+                <i class="fas fa-image"></i>&nbsp;&nbsp;View Gallery
+              </a>
+              {% endif %}
+              <a data-fslightbox="{{project.title}}" href="{{image}}"> </a>
+              {% endfor %}
+            </div>
+  
+            {% endif %} {% if project.link %}
+            <div class="project__link">
+              <a target="_blank" href="{{project.link}}">
+                <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp;View Project
+              </a>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+  
+        {% endif %} {% endfor %}
+      </div>
+    </div>
+  </section>
+  

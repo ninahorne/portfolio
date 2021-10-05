@@ -54,7 +54,7 @@ p {
   @include base-font();
   a,
   a:visited {
-    color: $main-color;
+    color: white;
     border: none;
   }
   @media screen and (min-width: $screen-sm-min) {
@@ -68,6 +68,7 @@ a,
 div {
   font-size: 1rem;
   font-family: "Noto Sans KR", sans-serif;
+  line-height: 1.2;
   // color: $font-color;
 }
 
@@ -104,9 +105,7 @@ code {
   // color: $text-color;
 }
 
-strong {
-  // font-weight: $bold-font-weight;
-}
+
 
 small {
   font-size: 1.2rem;
@@ -127,6 +126,14 @@ a:active {
 }
 
 h1 {
-  font-size: 1.75rem;
+  font-size: 4rem;
   line-heighT: 1;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h6 {
+  font-size: 1.75rem;
 }

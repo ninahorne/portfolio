@@ -93,5 +93,5 @@ textarea {
 }
 
 button {
-	@include button($color-light, $main-color);
+	@include button(white, black);
 }

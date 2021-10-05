@@ -4,13 +4,20 @@
 @mixin button($btn-bg, $btn-text) {
   @include base-font();
   font-weight: $bold-font-weight;
-  padding: 1rem 2rem;
+  padding: 0.75rem 1.5rem;
 	line-height: $base-line-height;
 	color: $btn-text;
 	background-color: $btn-bg;
-	border: 3px solid $btn-text;
-  border-radius: 200px;
-  box-shadow: 1px 1px 2px $border-gray;
+	border: 2px solid $btn-text;
+  border-radius: 50px;
+  box-shadow: 
+  4px 4px 0px $btn-text, 1px 1px 2px $border-gray;
+  text-transform: uppercase;
+
+  &:focus{
+    box-shadow: none;
+    transform: translate(4px, 4px);
+  }
 
 }
 

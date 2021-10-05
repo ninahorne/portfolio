@@ -9,6 +9,7 @@ $code-font: 'Source Code Pro', serif;
 $base-font-size: 10px;
 $base-line-height: 1.5;
 $base-font-weight: 400;
+$medium-font-weight: 500;
 $title-font-weight: 900;
 $bold-font-weight: $title-font-weight;
 // base colors
@@ -17,7 +18,7 @@ $main-color: hsl(195, 91, 30);
 $color-light: rgba(206, 241, 253, 0.3);
 $border-grey: #ddd;
 $border-gray: $border-grey;
-$contrast: #E2FADB;
+$contrast: #78CE7E;
 
 // viewport breakpoints
 $screen-xs-min: 480px;

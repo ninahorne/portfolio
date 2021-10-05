@@ -1,144 +1,21 @@
-
-
 {% if page.intro_paragraph and page.intro_paragraph != '' %}
-  <div class="intro-paragraph">
 
-    <h2>{{ page.title }}</h2>
-        <p class="intro">
-          {{ page.intro_paragraph | markdownify | remove: '<p>' | remove: '</p>' }}
-        </p>
-        <button>Let's Talk!</button>
-
-  </div>
-  <section>
-    <h2>My Work</h2>
-    <div class="projects">
-      {% for project in site.pages %}
-      {% if project.layout == 'project' %}
-      <div class="project">
-        <h1>{{ project.title }}</h1>
-        <p class="project__tech-stack">
-          {% for tech in project.tech_stack_details %}
-              {{ tech }} 
-              {% if forloop.index != project.tech_stack_details.size %}
-                +
-              {% endif %}
-          {% endfor %}
-        </p>
-
-        <p>{{project.description}}</p>
-
-
-        <div class="project__links">
-            {% if project.images.size %}
-            <div class="project__link">
-
-            {% for image in project.images%}
-              {% if forloop.index == 1 %}
-                <a
-                data-fslightbox="{{project.title}}"
-                href="{{image}}"
-                >
-                  <i class="fas fa-image"></i>&nbsp;&nbsp;View Gallery
-                </a>
-              {% endif %}
-            <a
-            data-fslightbox="{{project.title}}"
-            href="{{image}}"
-            >
-            </a>
-            {% endfor %}
-          </div>
-
-          {% endif %} 
-
-          {% if project.link %}
-            <div class="project__link">
-              <a target="_blank" href="{{project.link}}">
-                <i class="fas fa-external-link-alt"></i>&nbsp;&nbsp;View Project
-              </a>
-            </div>
-          {% endif %}
-
-          
-
-        </div>
-
-
-      </div>
-
-      {% endif %} 
-    {% endfor %}
+<section class="intro">
+  <div class="intro__background"></div>
+  <div class="container">
+    <div class="intro__paragraph">
+      <h2></h2>
+      <p>
+        I am a full-stack web developer. Currently, I’m focused on building
+        EdTech solutions at
+        <a target="_blank" href="https://wherewego.org">WhereWeGo,</a> but I am
+        always looking for freelance opportunities.
+      </p>
+      <button>Let's Talk!</button>
     </div>
+  </div>
+</section>
 
-      <!-- <div class="row">
-        <div class="col-md-3">
-          <div class="project">
-            <h3>New Orleans Training Navigator</h3>
-            <p>A web app built for the Greater New Orleans area to assist users in discovering and comparing
-              workforce training opportunities.
-            </p>
-            <div class="project__icons">
-              <p class="subtitle">ANGULAR + ASP.NET CORE + AZURE DEVOPS</p>
-            </div>
-            <div class="project__links">
-              <a target="_blank" href="https://explore.wherewego.org">View Site &nbsp;<i class="fas fa-external-link-alt"></i></a>
-            </div>
-         
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="project">
-            <h3>Rexchange - The Real Estate Exchange</h3>
-            <p>A gameified mobile app where locals can value houses like the stock exchange.
-            </p>
-            <div class="project__icons">
-              <p class="subtitle">NATIVESCRIPT ANGULAR + FIREBASE</p>
-    
-            </div>
-            <div class="project__links">
-              <a data-fslightbox="rexchange" href="../assets/img/rexchange-1.jpeg">View Slideshow &nbsp;<i class="far fa-images"></i></a>
-              <a data-fslightbox="rexchange" href="../assets/img/rexchange-2.jpeg"></a>
-              <a data-fslightbox="rexchange" href="../assets/img/rexchange-3.jpeg"></a>
-
-            </div>
-            
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="project">
-            <h3>ClinicCases - Law School Case Management Software</h3>
-            <p>A UI/UX redesign of a software to assist law school students in mangaging their caseloads
-            </p>
-            <div class="project__icons">
-              <p class="subtitle">ADOBE XD + PHP + HTML + CSS + JS</p>
-            </div>
-            <div class="project__links">
-              <a>View Slideshow &nbsp;<i class="far fa-images"></i></a>
-            </div>
-         
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="project">
-            <h3>LA Board of Regents Dual Enrollment</h3>
-            <p>A portal for learning about dual enrollment offerings in Louisiana
-            </p>
-            <div class="project__icons">
-              <p class="subtitle">WORDPRESS + ALGOLIA + GOOGLE MAPS API</p>
-            </div>
-            <div class="project__links">
-              <a>View Slideshow &nbsp;<i class="far fa-images"></i></a>
-            </div>
-         
-          </div>
-        </div>
-      </div> -->
-     
-    
-  
-
-    </section>
 
 
 {% endif %}
