@@ -188,18 +188,19 @@ section > h2 {
     }
 
     p {
+      @include base-font();
+      line-height: 1.5;
       max-width: 500px;
       width: 100%;
       text-align: center;
       font-size: 1.25rem;
-      font-weight: $medium-font-weight;
       a {
+        font-family: inherit;
         font-size: inherit;
         text-decoration: underline;
         transition: color 0.3s ease-in-out;
-        &:hover{
+        &:hover {
           color: $contrast;
-
         }
       }
     }
@@ -221,7 +222,7 @@ section > h2 {
     }
   }
 }
-.projects__container {
+section {
   h3 {
     color: white;
     margin: 0 1rem;
@@ -291,5 +292,30 @@ section > h2 {
   100% {
     bottom: 0;
     opacity: 1;
+  }
+}
+
+form {
+  @include base-font();
+
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+
+  label {
+    color: $contrast;
+    margin: 1rem 0;
+  }
+
+  input,
+  textarea {
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    box-shadow: none;
+  }
+  button {
+    margin: 1rem 0;
+    width: 155px;
   }
 }

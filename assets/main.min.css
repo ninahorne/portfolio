@@ -785,13 +785,16 @@ section > h2 {
   margin: 0.25rem;
 }
 .intro .intro__paragraph p {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
   max-width: 500px;
   width: 100%;
   text-align: center;
   font-size: 1.25rem;
-  font-weight: 500;
 }
 .intro .intro__paragraph p a {
+  font-family: inherit;
   font-size: inherit;
   text-decoration: underline;
   transition: color 0.3s ease-in-out;
@@ -817,7 +820,7 @@ section > h2 {
   }
 }
 
-.projects__container h3 {
+section h3 {
   color: white;
   margin: 0 1rem;
 }
@@ -886,4 +889,26 @@ section > h2 {
     bottom: 0;
     opacity: 1;
   }
+}
+form {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+form label {
+  color: #78CE7E;
+  margin: 1rem 0;
+}
+form input,
+form textarea {
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+  box-shadow: none;
+}
+form button {
+  margin: 1rem 0;
+  width: 155px;
 }/*# sourceMappingURL=main.min.css.map */
