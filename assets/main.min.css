@@ -629,6 +629,10 @@ h6 {
   font-size: 1.75rem;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   perspective: 1px;
   overflow-x: hidden;
@@ -820,6 +824,9 @@ section > h2 {
   }
 }
 
+section {
+  scroll-margin-top: 1.5rem;
+}
 section h3 {
   color: white;
   margin: 0 1rem;
@@ -899,7 +906,8 @@ form {
 }
 form label {
   color: #78CE7E;
-  margin: 1rem 0;
+  margin: 1rem 0 0rem;
+  font-weight: 900;
 }
 form input,
 form textarea {

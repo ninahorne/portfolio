@@ -9,6 +9,11 @@
 
 // the body element is our primary layout grid
 
+html {
+  scroll-behavior: smooth;
+
+}
+
 body {
   perspective: 1px;
   overflow-x: hidden;
@@ -223,6 +228,7 @@ section > h2 {
   }
 }
 section {
+  scroll-margin-top: 1.5rem;
   h3 {
     color: white;
     margin: 0 1rem;
@@ -304,7 +310,8 @@ form {
 
   label {
     color: $contrast;
-    margin: 1rem 0;
+    margin: 1rem 0 0rem;
+    font-weight: $title-font-weight;
   }
 
   input,

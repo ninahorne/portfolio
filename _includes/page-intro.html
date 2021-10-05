@@ -11,11 +11,20 @@
         <a target="_blank" href="https://wherewego.org">WhereWeGo,</a> but I am
         always looking for freelance opportunities.
       </p>
-      <button>Let's Talk!</button>
+      <button id="contactButton">Let's Talk!</button>
     </div>
   </div>
 </section>
 
-
-
 {% endif %}
+
+<script>
+  const button = document.querySelector("#contactButton");
+  button.addEventListener("click", navigateToContact);
+
+  function navigateToContact() {
+    document.querySelector("#contact").scrollIntoView({
+      behavior: "smooth",
+    });
+  }
+</script>
